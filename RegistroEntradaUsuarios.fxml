@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500" prefWidth="800" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.mycompany.mavenproject1.RegistroEntradaUsuariosController">
+    <children>
+        <!-- Título -->
+        <Label layoutX="200" layoutY="30" text="Registro de entradas de usuarios" textFill="yellow">
+            <font>
+                <Font name="Lucida Console" size="20.0" />
+            </font>
+        </Label>
+        
+        <!-- Campo Número de Usuario -->
+        <Label layoutX="50" layoutY="100" text="Número de usuario:" textFill="yellow">
+            <font>
+                <Font name="Lucida Console" size="14.0" />
+            </font>
+        </Label>
+        <TextField layoutX="200" layoutY="95" prefWidth="150" translateX="5.0" />
+        
+        <!-- Visita Checkbox -->
+        <Label layoutX="50" layoutY="150" text="Visita" textFill="yellow">
+            <font>
+                <Font name="Lucida Console" size="14.0" />
+            </font>
+        </Label>
+        <CheckBox layoutX="200" layoutY="145" />
+        
+        <!-- Suscripción -->
+        <Label layoutX="50" layoutY="200" text="Suscripción:" textFill="yellow">
+            <font>
+                <Font name="Lucida Console" size="14.0" />
+            </font>
+        </Label>
+        
+        <!-- Tabla Calendario -->
+        <GridPane gridLinesVisible="true" layoutX="275.0" layoutY="208.0" prefHeight="243.0" prefWidth="479.0" style="-fx-border-color: yellow;">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="50" />
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="50" />
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="50" />
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="50" />
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="50" />
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="50" />
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="50" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints prefHeight="30" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="30" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="30" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="30" vgrow="SOMETIMES" />
+                <RowConstraints prefHeight="30" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <!-- Encabezados -->
+                <Label text="D" textFill="yellow" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label text="L" textFill="yellow" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label text="M" textFill="yellow" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <Label text="M" textFill="yellow" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                <Label text="J" textFill="yellow" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                <Label text="V" textFill="yellow" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                <Label text="S" textFill="yellow" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

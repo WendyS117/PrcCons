@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="502.0" prefWidth="691.0" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.mycompany.mavenproject1.ResumenUsuariosController">
+   <children>
+      <Label layoutX="181.0" layoutY="31.0" text="Resumen de datos de usuarios" textFill="orange">
+         <font>
+            <Font name="Lucida Console" size="20.0" />
+         </font>
+      </Label>
+      
+      <TableView fx:id="tablaUsuarios" layoutX="68.0" layoutY="74.0" prefHeight="376.0" prefWidth="556.0">
+         <columns>
+            <TableColumn fx:id="columnaNombre" prefWidth="279.0" text="Nombre" />
+            <TableColumn fx:id="columnaNumeroUsuario" prefWidth="147.0" text="Número de usuario" />
+            <TableColumn fx:id="columnaSuscripcion" prefWidth="129.0" text="Suscripción" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
