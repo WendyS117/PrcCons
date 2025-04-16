@@ -1,26 +1,52 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
-package com.mycompany.mavenproject1;
+package com.mycompany.gym;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.fxml.Initializable;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.Node;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import java.io.IOException;
 
-/**
- * FXML Controller class
- *
- * @author PC
- */
-public class MenuController implements Initializable {
+public class MenuController {
 
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+    @FXML
+    private void openEntradaUsuarios(ActionEvent event) {
+        cambiarEscena(event, "registro_entrada.fxml", "Registro de Entrada");
+    }
+
+    @FXML
+    private void openNuevoUsuario(ActionEvent event) {
+        cambiarEscena(event, "nuevo_usuario.fxml", "Nuevo Usuario");
+    }
+
+    @FXML
+    private void openInventario(ActionEvent event) {
+        cambiarEscena(event, "inventario.fxml", "Inventario");
+    }
+
+    @FXML
+    private void openResumenUsuarios(ActionEvent event) {
+        cambiarEscena(event, "resumen.fxml", "Resumen de Usuarios");
+    }
+
+    @FXML
+    private void closeApp(ActionEvent event) {
+        System.out.println("Cerrando la aplicación...");
+        System.exit(0);
+    }
+
+    private void cambiarEscena(ActionEvent event, String fxmlArchivo, String tituloVentana) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlArchivo));
+            Scene nuevaEscena = new Scene(loader.load());
+            Stage ventanaActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            ventanaActual.setScene(nuevaEscena);
+            ventanaActual.setTitle(tituloVentana);
+            ventanaActual.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error al cargar la vista: " + fxmlArchivo);
+        }
+    }
 }
