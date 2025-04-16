@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500" prefWidth="800" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.mycompany.mavenproject1.RegistroEntradaUsuariosController">
+<AnchorPane prefHeight="500" prefWidth="800" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.mycompany.gym.RegistroEntradaUsuariosController">
     <children>
         <!-- Título -->
         <Label layoutX="200" layoutY="30" text="Registro de entradas de usuarios" textFill="yellow">

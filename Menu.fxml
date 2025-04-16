@@ -6,39 +6,68 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="491.0" prefWidth="861.0" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.mycompany.mavenproject1.MenuController">
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="861.0" style="-fx-background-color: black;" 
+            xmlns="http://javafx.com/javafx/23.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.mycompany.gym.MenuController">
     <children>
         <!-- Título principal -->
-        <Label layoutX="228.0" layoutY="29.0" prefHeight="91.0" prefWidth="304.0" text="Menú Principal" textFill="#2fff00" translateX="60.0">
-         <font>
-            <Font name="MV Boli" size="36.0" />
-         </font></Label>
+        <Label layoutX="228.0" layoutY="29.0" prefHeight="91.0" prefWidth="304.0" text="Menú Principal" 
+               textFill="#2fff00" translateX="60.0">
+            <font>
+                <Font name="MV Boli" size="36.0" />
+            </font>
+        </Label>
 
         <!-- VBox para los botones del menú -->
-        <VBox layoutX="150.0" layoutY="100.0" spacing="20.0" translateX="160.0" translateY="50.0">
+        <VBox layoutX="150.0" layoutY="100.0" prefHeight="338.0" prefWidth="200.0" spacing="20.0" 
+              translateX="160.0" translateY="50.0">
+              
             <!-- Opción 1: Entrada de usuarios -->
-            <Button mnemonicParsing="false" onAction="#openEntradaUsuarios" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: yellow; -fx-border-width: 2px; -fx-text-fill: yellow;" text="Entrada de usuarios">
-            <font>
-               <Font name="MS PGothic" size="18.0" />
-            </font></Button>
+            <Button mnemonicParsing="false" onAction="#openEntradaUsuarios" prefHeight="50.0" prefWidth="200.0" 
+                    style="-fx-background-color: transparent; -fx-border-color: yellow; -fx-border-width: 2px; -fx-text-fill: yellow;" 
+                    text="Entrada de usuarios">
+                <font>
+                    <Font name="MS PGothic" size="18.0" />
+                </font>
+            </Button>
 
             <!-- Opción 2: Nuevo usuario -->
-            <Button mnemonicParsing="false" onAction="#openNuevoUsuario" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: magenta; -fx-border-width: 2px; -fx-text-fill: magenta;" text="Nuevo usuario">
-            <font>
-               <Font name="MS Gothic" size="18.0" />
-            </font></Button>
+            <Button mnemonicParsing="false" onAction="#openNuevoUsuario" prefHeight="50.0" prefWidth="200.0" 
+                    style="-fx-background-color: transparent; -fx-border-color: magenta; -fx-border-width: 2px; -fx-text-fill: magenta;" 
+                    text="Nuevo usuario">
+                <font>
+                    <Font name="MS Gothic" size="18.0" />
+                </font>
+            </Button>
 
             <!-- Opción 3: Inventario -->
-            <Button mnemonicParsing="false" onAction="#openInventario" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: cyan; -fx-border-width: 2px; -fx-text-fill: cyan;" text="Inventario">
-            <font>
-               <Font name="MS Gothic" size="18.0" />
-            </font></Button>
+            <Button mnemonicParsing="false" onAction="#openInventario" prefHeight="50.0" prefWidth="200.0" 
+                    style="-fx-background-color: transparent; -fx-border-color: cyan; -fx-border-width: 2px; -fx-text-fill: cyan;" 
+                    text="Inventario">
+                <font>
+                    <Font name="MS Gothic" size="18.0" />
+                </font>
+            </Button>
+
+            <!-- Opción 4: Resumen -->
+            <Button mnemonicParsing="false" onAction="#openResumenUsuarios" prefHeight="50.0" prefWidth="200.0" 
+                    style="-fx-background-color: transparent; -fx-border-color: orange; -fx-border-width: 2px; -fx-text-fill: orange;" 
+                    text="Resumen">
+                <font>
+                    <Font name="MS Gothic" size="18.0" />
+                </font>
+            </Button>
 
             <!-- Opción 5: Salir -->
-            <Button mnemonicParsing="false" onAction="#closeApp" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px; -fx-text-fill: white;" text="Salir">
-            <font>
-               <Font name="MS Gothic" size="18.0" />
-            </font></Button>
+            <Button mnemonicParsing="false" onAction="#closeApp" prefHeight="50.0" prefWidth="200.0" 
+                    style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px; -fx-text-fill: white;" 
+                    text="Salir">
+                <font>
+                    <Font name="MS Gothic" size="18.0" />
+                </font>
+            </Button>
         </VBox>
     </children>
 </AnchorPane>
+

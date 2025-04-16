@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="452.0" prefWidth="874.0" spacing="20.0" style="-fx-background-color: black; -fx-border-color: #c501e2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gym.DatosGuardadosController">
+    
+    <children>
+        <Label text="Datos Guardados" textFill="#c501e2">
+         <font>
+            <Font name="Lucida Console" size="27.0" />
+         </font></Label>
+      <HBox prefHeight="26.0" prefWidth="874.0">
+         <children>
+      
+              <Label text="Nombre:" textFill="#c501e2" translateX="50.0">
+               <font>
+                  <Font name="Lucida Console" size="15.0" />
+               </font>
+            </Label>
+              <Label fx:id="lblNombre" text="-" textFill="#c501e2" translateX="55.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="29.0" prefWidth="828.0">
+         <children>
+      
+              <Label text="Fecha de Nacimiento:" textFill="#c501e2" translateX="50.0">
+               <font>
+                  <Font name="Lucida Console" size="15.0" />
+               </font>
+            </Label>
+              <Label fx:id="lblFechaNacimiento" text="-" textFill="#c501e2" translateX="55.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="29.0" prefWidth="878.0">
+         <children>
+      
+                    <Label text="Sexo:" textFill="#c501e2" translateX="50.0">
+               <font>
+                  <Font name="Lucida Console" size="15.0" />
+               </font>
+            </Label>
+              <Label fx:id="lblSexo" text="-" textFill="#c501e2" translateX="55.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="37.0" prefWidth="874.0">
+         <children>
+      
+                                <Label text="Domicilio:" textFill="#c501e2" translateX="50.0">
+               <font>
+                  <Font name="Lucida Console" size="15.0" />
+               </font>
+            </Label>
+              <Label fx:id="lblDomicilio" text="-" textFill="#c501e2" translateX="55.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="40.0" prefWidth="874.0">
+         <children>
+      
+                          <Label text="Teléfono:" textFill="#c501e2" translateX="50.0">
+               <font>
+                  <Font name="Lucida Console" size="15.0" />
+               </font>
+            </Label>
+              <Label fx:id="lblTelefono" text="-" textFill="#c501e2" translateX="55.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="40.0" prefWidth="874.0">
+         <children>
+      
+                    <Label text="Suscripción:" textFill="#c501e2" translateX="50.0">
+               <font>
+                  <Font name="Lucida Console" size="15.0" />
+               </font>
+            </Label>
+              <Label fx:id="lblSuscripcion" text="-" textFill="#c501e2" translateX="55.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+
+    </children>
+</VBox>
+
+

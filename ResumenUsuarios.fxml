@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="502.0" prefWidth="691.0" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.mycompany.mavenproject1.ResumenUsuariosController">
+<AnchorPane prefHeight="502.0" prefWidth="691.0" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.mycompany.gym.ResumenUsuariosController">
    <children>
       <Label layoutX="181.0" layoutY="31.0" text="Resumen de datos de usuarios" textFill="orange">
          <font>
