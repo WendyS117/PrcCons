@@ -1,26 +1,41 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package com.mycompany.gym;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.fxml.Initializable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-/**
- * FXML Controller class
- *
- * @author PC
- */
-public class ResumenUsuariosController implements Initializable {
+public class ResumenUsuariosController {
 
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+    @FXML
+    private TableView<UsuarioResumen> tablaUsuarios;
+
+    @FXML
+    private TableColumn<UsuarioResumen, String> columnaNombre;
+
+    @FXML
+    private TableColumn<UsuarioResumen, String> columnaNumeroUsuario;
+
+    @FXML
+    private TableColumn<UsuarioResumen, String> columnaSuscripcion;
+
+    private static final ObservableList<UsuarioResumen> listaUsuarios = FXCollections.observableArrayList();
+
+    public static void agregarUsuario(String nombreCompleto, String numeroUsuario, String suscripcion) {
+        listaUsuarios.add(new UsuarioResumen(nombreCompleto, numeroUsuario, suscripcion));
+    }
+
+    @FXML
+    public void initialize() {
+        columnaNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+        columnaNumeroUsuario.setCellValueFactory(new PropertyValueFactory<>("numeroUsuario"));
+        columnaSuscripcion.setCellValueFactory(new PropertyValueFactory<>("suscripcion"));
+
+        tablaUsuarios.setItems(listaUsuarios);
+    }
 }
+
+
+

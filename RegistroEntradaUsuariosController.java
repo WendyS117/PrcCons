@@ -1,10 +1,15 @@
 
 package com.mycompany.gym;
 
+import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 public class RegistroEntradaUsuariosController {
 
@@ -17,35 +22,31 @@ public class RegistroEntradaUsuariosController {
     @FXML
     private GridPane calendarioGrid;
 
-    // Método para inicializar elementos si es necesario
-    @FXML
-    public void initialize() {
-        // aquí podríamos meter lo del calendario
-        System.out.println("Controlador inicializado correctamente.");
-    }
-
-    // nos falta un botón para guardar la entrada del usuario, creo
     @FXML
     public void guardarEntrada() {
-        String numeroUsuario = txtNumeroUsuario.getText();
-        boolean traeVisita = chkVisita.isSelected();
-
-        if (numeroUsuario == null || numeroUsuario.trim().isEmpty()) {
-            System.out.println("Número de usuario es obligatorio.");
+        String numeroUsuario = txtNumeroUsuario.getText().trim();
+        boolean esVisita = chkVisita.isSelected();
+        
+        if(numeroUsuario.isEmpty()){
+            System.out.println("Debes ingresar un numero de usuario.");
             return;
         }
-
-        System.out.println("Entrada registrada:");
-        System.out.println("Usuario: " + numeroUsuario);
-        System.out.println("Visita: " + (traeVisita ? "Sí" : "No"));
-
-        // aquí iría lo de la base de datos
+        
+        System.out.println("Entrada guardada para usuario: " + numeroUsuario +
+                (esVisita ? " (Visita)" : " (Miembro)"));
     }
 
-    // Método para retroceder 
     @FXML
-    public void retroceder() {
-        System.out.println("Retrocediendo a la pantalla anterior...");
-        // Aquí se podría cerrar la escena o cambiar a otra quizá también regresar al menú principal
+    public void retroceder(javafx.event.ActionEvent event) {
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("menu.fxml"));
+            Pane root = loader.load();
+            
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+        } catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Error al cargar la escena del menu.");
+        }
     }
 }

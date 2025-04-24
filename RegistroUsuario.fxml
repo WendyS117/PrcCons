@@ -14,6 +14,7 @@
     <children>
       <HBox prefHeight="46.0" prefWidth="803.0">
          <children>
+            <Button mnemonicParsing="false" style="-fx-background-color: #c501e2;" text="&lt;- Regresar" textFill="WHITE" />
             <Label text="Registro de usuario" textFill="#c501e2" translateX="300.0">
                <font><Font name="Lucida Console" size="25.0" /></font>
             </Label>
@@ -114,8 +115,7 @@
 
       <HBox prefHeight="38.0" prefWidth="906.0">
          <children>
-            <Button fx:id="guardarButton" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #c501e2;"
-                    text="Guardar" textFill="WHITE" translateX="400.0" />
+            <Button fx:id="guardarButton" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #c501e2;" text="Guardar" textFill="WHITE" translateX="400.0" />
          </children>
       </HBox>
    </children>

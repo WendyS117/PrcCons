@@ -12,14 +12,11 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="709.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gym.InventarioController">
     
-    <!-- Encabezado -->
     <HBox layoutX="100" layoutY="20" prefHeight="40" prefWidth="600" spacing="10">
         <children>
             <Label style="-fx-font-size: 20px; -fx-font-family: 'Lucida Console';" text="Inventario de Gimnasio" textFill="#00FFFF" />
         </children>
     </HBox>
-    
-    <!-- Barra de búsqueda -->
     <HBox layoutX="50" layoutY="80" prefHeight="40" spacing="10">
         <children>
             <Label text="Buscar artículo:" textFill="#00FFFF">
@@ -30,16 +27,12 @@
             <Button fx:id="searchButton" style="-fx-background-color: #00FFFF; -fx-text-fill: black;" text="Buscar" />
         </children>
     </HBox>
-
-    <!-- Tabla de inventario -->
     <TableView fx:id="inventoryTable" layoutX="50.0" layoutY="120.0" prefHeight="309.0" prefWidth="486.0">
         <columns>
             <TableColumn fx:id="nameColumn" prefWidth="344.0" text="Nombre" />
             <TableColumn fx:id="quantityColumn" prefWidth="142.0" text="Cantidad" />
         </columns>
     </TableView>
-
-    <!-- Formulario para agregar/editar artículos -->
     <VBox layoutX="50" layoutY="440" prefWidth="700" spacing="10">
         <children>
             <HBox spacing="10">
@@ -63,5 +56,10 @@
             </HBox>
         </children>
     </VBox>
+   <Button layoutX="14.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: cyan;" text="Regresar" textFill="#00ffe9">
+      <font>
+         <Font name="Lucida Console" size="12.0" />
+      </font>
+   </Button>
     
 </AnchorPane>

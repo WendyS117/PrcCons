@@ -6,33 +6,54 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * JavaFX App
  */
 public class App extends Application {
 
-    private static Scene scene;
-
+    private static Stage primaryStage;
+    private static final Map<String, Parent> scenes = new HashMap<>();
+    
     @Override
-    public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage stage) throws Exception {
+        primaryStage = stage;
+        
+        scenes.put("menu", loadFXML("menu.fxml"));
+        scenes.put("registroUsuario", loadFXML("RegistroUsuario.fxml"));
+        scenes.put("datosGuardados", loadFXML("DatosGuardados.fxml"));
+        scenes.put("entradaUsuarios", loadFXML("RegistroEntradaUsuarios.fxml"));
+        scenes.put("inventario", loadFXML("Inventario.fxml"));
+        scenes.put("resumenUsuarios", loadFXML("ResumenUsuarios.fxml"));
+        
+        primaryStage.setTitle("Sistema de Gimnasio");
+        primaryStage.setScene(new Scene(scenes.get("menu")));
+        primaryStage.setResizable(false);
+        primaryStage.show();
+    }
+    
+    public static void setScene(String name) {
+        Parent root = scenes.get(name);
+        if (root != null) {
+            primaryStage.getScene().setRoot(root);
+        } else {
+            System.out.println("La escena '" + name + "' no está cargada.");
+        }
     }
 
-    static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
+    private Parent loadFXML(String fxmlFile) throws Exception {
+        String fullPath = "/com/mycompany/gym/" + fxmlFile;
+        var fxmlURL = getClass().getResource(fullPath);
+        if (fxmlURL == null) {
+            throw new IllegalStateException("No se pudo encontrar el archivo FXML: " + fullPath);
+        }
+        FXMLLoader loader = new FXMLLoader(fxmlURL);
+        return loader.load();
     }
-
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
-    }
-
+    
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
-
 }
